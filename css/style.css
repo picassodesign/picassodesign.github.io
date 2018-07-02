@@ -1,0 +1,56 @@
+.brand h1{
+  font-size: 40px ;
+  position: auto;
+  color:#F7EEF7;
+  padding-left: 50px;
+  padding-top: 50px;
+  font-weight:bold;
+}
+.brand h1{
+  font-family: 'Kaushan Script', cursive;
+}
+header{
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.6),rgba(0,0,0,0.6)), url(../media/showcase.jpg);
+  height: 90vh ;
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position:
+}
+.knowpara{
+  font-size: 18px;
+  margin-top: 35px;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 10px;
+  text-align:center;
+}
+.works{
+  margin-top: 70px;
+}
+.hr{
+  width:200px;
+}
+.know {
+  color:#0E2189;
+}
+.hr1{
+  width: auto;
+}
+footer{
+  background-color: black;
+  color:white;
+  height: 40px;
+}
+footer .foot{
+  text-align: right;
+  margin-right: 30px;
+  padding-top: 10px;
+}
+.logoColoumn{
+  padding-top: 30px;
+  background: rgb(142,139,189);
+background: linear-gradient(90deg, rgba(142,139,189,1) 0%, rgba(209,44,50,1) 0%, rgba(255,65,232,1) 30%, rgba(94,71,212,1) 58%, rgba(244,73,73,1) 100%);
+}
