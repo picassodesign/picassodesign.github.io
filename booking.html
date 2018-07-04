@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>booking</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <style media="screen">
+    body{
+      background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
+    }
+    .home{
+      float: right;
+      margin-right: 30px;
+    }
+    .block{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  </style>
+  <body>
+    <div class="text-center">
+      <h1 align="center"><font color="white">Place your Booking</font></h1>
+
+    </div>
+    <a href="index.html"><button type="button" class="btn btn-success home">Back to Home</button></a>
+    <div class="bookingform__container">
+    <form id="bookingform" method="GET" action="booking-success.html">
+
+        <div class="form__group">
+            <label class="form__label" for="firstname">First Name</label>
+            <input class="form__input" id="firstname" name="firstname" required>
+            <span class="correct" id="firstname-error"></span>
+        </div>
+
+        <div class="form__group">
+            <label class="form__label" for="lastname">Last Name</label>
+            <input class="form__input" id="lastname" name="lastname" required>
+            <span class="correct" id="lastname-error"></span>
+        </div>
+
+        <div class="form__group">
+            <label class="form__label" for="email">Email Address</label>
+            <input class="form__input" id="email" type="email" name="email" required>
+            <span class="correct" id="email-error"></span>
+        </div>
+
+        <div class="form__group">
+            <label class="form__label" for="phone">Phone Number</label>
+            <input class="form__input" id="phone" name="phone" required>
+            <span class="correct" id="phone-error"></span>
+        </div>
+
+        <div class="form__group">
+            <label class="form__label" for="date">Date</label>
+            <input class="form__input" name="date" id="date" placeholder="22/10/2016" required>
+            <span class="correct" id="date-error"></span>
+        </div>
+
+        <div class="form__group">
+            <label class="adventure__title" for="adventure">Work Type</label>
+            <select class="form__option" title="adventure" id="adventure" required>
+                <option value=""></option>
+                <option value="charter">Wall art</option>
+                <option value="mountain">Mural</option>
+                <option value="tramping">Logo Design</option>
+                <option value="photograph">Web design</option>
+            </select>
+            <span class="correct" id="adventure-error"></span>
+        </div>
+
+        <div class="form__group">
+
+            <label class="time__title" for="time">Time Of Day</label>
+            <select class="form__option" title="time" id="time" required>
+                <option value=""></option>
+            <option value="morning">Morning</option>
+            <option value="mid-day">Mid-Day</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="sunset">Sunset</option>
+            </select>
+            <span class="correct" id="time-error"></span>
+        </div>
+
+
+        <div class="form__group">
+            <label class="location__title" for="location">Location</label>
+            <select class="form__option" title="location" id="location" required>
+                <option value=""></option>
+            <option value="queenstown">Trivandrum</option>
+            <option value="wanaka">Kollam</option>
+            <option value="queenstown">pathanamthita</option>
+            <option value="wanaka">Eranakulam</option>
+            </select>
+                <span class="correct" id="location-error"></span>
+
+        </div>
+
+        <div class="button__group">
+            <button type="submit" class="btn btn-primary btn-block block">submit</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        addFormValidation(document.querySelector('#bookingform'))
+    });
+    ////// MAGIC FORM /////////
+var elements;
+var i = 0;
+var isError = false;
+var errorMessage;
+var correctMessage = "✓";
+var errorSpan;
+
+// var homeDelivery = document.querySelector("#home-delivery");
+// var storePickup = document.querySelector("#store-pickup");
+
+/****************************/
+/*                          */
+/*      Form Validator      */
+/*                          */
+/****************************/
+
+//when the page loads
+function addFormValidation(theForm)  {
+    if (theForm === null || theForm.tagName.toUpperCase() !== 'FORM') {
+        throw new Error("expected first parameter to addFormValidation to be a FORM.");
+    }
+    //disable HTML5 validation
+    theForm.noValidate = true;
+
+    //when the form is submitted
+    theForm.addEventListener('submit', validateFields);
+
+    elements = theForm.elements;
+
+    //for loop cycles through all form elements
+    for (i = 0; i < elements.length; i += 1) {
+        //waits until form input loses focus
+        elements[i].addEventListener("blur", function(evt){
+
+            //flag if particular field is invalid
+            if (!isFieldValid(evt.target)) {
+                isError = true;
+            }
+        });
+    }
+
+    function validateFields(evt) {
+        //assume there are no errors
+        isError = false;
+
+        //check every field in the form is filled
+        console.log(elements);
+        for (i = 0; i < elements.length; i += 1) {
+
+            //flag if field is invalid
+            if (!isFieldValid(elements[i])) {
+                isError = true;
+            }
+        }
+
+        //if any field is found with an error
+        if (isError) {
+            //prevent form from submitting
+            evt.preventDefault();
+        }
+    }
+
+    //checks to see if fields are valid and meet input criteria
+    function isFieldValid(field) {
+        errorMessage = "";
+
+        //Skip fields that are always considered valid
+        if (! needsToBeValidated(field)) {
+            //returns true if the field needs to be validated
+            return true;
+        }
+
+        //throw an error if addFormValidation is passed an element that it can't use
+        if (field.id.length === 0 && field.name.length === 0) {
+            console.error("error: ", field);
+            throw new Error("found a field that is missing an id and/or name attribute. name should be there. id is required for determining the field's error message element.");
+        }
+
+        //remove the invalid class of the field
+        field.classList.remove('invalid');
+
+        // give the error span a class and the error message.
+        errorSpan = document.querySelector('#' + field.id + '-error');
+        if (errorSpan === null) {
+            console.error("error: ", field);
+            throw new Error("could not find the '#" + field.id + "-error' element. It's needed for error messages if #" + field.id + " is ever invalid.");
+        }
+
+        errorSpan.classList.remove('danger');
+
+        errorSpan.innerHTML = correctMessage;
+
+        //checks if firstname or lastname input matches minimum character limit
+        if ((field.id === "firstname" || field.id === "lastname") && !isCorrectLength(field.value))  {
+            errorMessage = "Must be 2 or more characters long.";
+        }
+
+        //checks if input is a valid email address
+        if (field.type === "email" && !isEmail(field.value)) {
+            errorMessage = "This should be a valid email address.";
+        }
+
+        //checks if valid phone number
+        if (field.id === "phone" && !isPhone(field.value)) {
+            errorMessage = "This must be a valid New Zealand phone number";
+        }
+
+        //checks if valid date
+        if (field.id === "date" && !isDate(field.value)) {
+            errorMessage = "Date must be in DD/MM/YYYY Format";
+        }
+
+        //only check the fields that are required && if a field is left blank
+        if (field.required && field.value.trim() === "") {
+            errorMessage = "This field is required.";
+        }
+
+        //At the end, if the variable isn't a blank string, we put that error
+        //message in the error span, and add the error classes.
+        if (errorMessage !== "") {
+            // give the field an error class
+            field.classList.add('invalid');
+
+            // give the error span a class and the error message.
+            errorSpan.classList.add('danger');
+            errorSpan.innerHTML = errorMessage;
+
+            //an error is found
+            return false;
+        }
+
+        return true;
+    }
+
+    //checks to see if fields need to be valid
+    function needsToBeValidated(field) {
+        if(field.offsetWidth === 0 && field.offsetHeight === 0) {
+            return false;
+        }
+
+        // checks an array of all the automatically valid types to see if it contains the field's type.
+        // If the field has type 'text', indexOf returns -1, and -1 === -1 is true, so returns true
+        return ['submit', 'reset', 'button', 'hidden', 'fieldset'].indexOf(field.type) === -1;
+    }
+
+    //checks to see if email input is valid email address format
+    function isEmail(input) {
+        return input.match(/^([a-z0-9_.\-+]+)@([\da-z.\-]+)\.([a-z\.]{2,})$/);
+    }
+
+    // checks if phone number is valid
+    function isPhone(input) {
+        return input.match(/^([0-9]*).{8,10}$/);
+    }
+
+    // checks if phone number is valid
+    function isDate(input) {
+        return input.match(/(^(((0[1-9]|1[0-9]|2[0-8])[\/](0[1-9]|1[012]))|((29|30|31)[\/](0[13578]|1[02]))|((29|30)[\/](0[4,6,9]|11)))[\/](19|[2-9][0-9])\d\d$)|(^29[\/]02[\/](19|[2-9][0-9])(00|04|08|12|16|20|24|28|32|36|40|44|48|52|56|60|64|68|72|76|80|84|88|92|96)$)/);
+    }
+
+    //checks if name input is the correct length
+    function isCorrectLength(input) {
+        return input.match(/.{2}$/);
+    }
+
+//     /****************************/
+//     /*                          */
+//     /*    Delivery Drop Down    */
+//     /*                          */
+//     /****************************/
+
+//     //displays address input when Home Delivery radio button is selected
+//     homeDelivery.addEventListener("click", unHide);
+
+//     // hides address input when Store Pickup radio button is selected
+//     storePickup.addEventListener("click", hide);
+
+//     //function adds css class 'hidden' to delivery element
+//     function hide(){
+//         delivery.classList.add("hidden");
+//     }
+
+//     //function removes css class 'hidden' to delivery element
+//     function unHide(){
+//         delivery.classList.remove("hidden");
+//     }
+}
+
+
+
+
+</script>
+
+  </body>
+</html>

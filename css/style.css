@@ -1,13 +1,11 @@
-.brand h1{
-  font-size: 40px ;
+.brand {
+  font-size: 30px ;
   position: auto;
   color:#F7EEF7;
-  padding-left: 50px;
-  padding-top: 50px;
   font-weight:bold;
-}
-.brand h1{
-  font-family: 'Kaushan Script', cursive;
+  margin-left: 20px;
+  line-height: 50px;
+  font-family: 'Kaushan script', cursive;
   text-shadow: 2px 2px 2px red;
 }
 header{
@@ -19,6 +17,12 @@ header{
   background-size: cover;
   background-attachment: fixed;
   background-position:
+}
+.intro {
+  font-size: 40px;
+  padding-top: 70px;
+  text-align: justify;
+  color: white;
 }
 .knowpara{
   font-family: 'Eagle Lake', cursive;
@@ -55,7 +59,7 @@ footer .social{
   float: left;
   padding-top: 20px;
   padding-left: 10px;
-  
+
 }
 footer .foot{
   text-align: right;
@@ -77,63 +81,328 @@ footer .foot{
 }
 
 
-</-------------gallery--------------/>
-div.gallery {
-    border: 1px solid #ccc;
+/*-------------gallery--------------/>
+/*
+
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77).
+
+The 'supports' rule will only run if your browser supports CSS grid.
+
+Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
+
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+	/* Base font size */
+	font-size: 10px;
 }
 
-div.gallery:hover {
-    border: 1px solid #777;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
-div.gallery img {
-    width: 100%;
-    height: 250px;
+body {
+	min-height: 100vh;
+	background-color: #fafafa;
 }
 
-div.desc {
-    padding: 15px;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-  color: #BFAFA8;
+.container {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
 }
 
-* {
-    box-sizing: border-box;
+.heading {
+	font-family: "Montserrat", Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
 }
 
-.responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
+.heading span {
+	display: block;
 }
 
-@media only screen and (max-width: 700px) {
-    .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
-    }
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
 }
 
-@media only screen and (max-width: 500px) {
-    .responsive {
-        width: 100%;
-    }
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
 }
 
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
 }
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling.
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+
 .gal{
   padding-top: 20px;
   padding-bottom: 50px;
-  background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
+  background: rgb(142,139,189);
+  background: rgb(142,139,189);
+  background: linear-gradient(90deg, rgba(142,139,189,1) 0%, rgba(209,44,50,1) 0%, rgba(255,65,232,1) 0%, rgba(94,71,212,1) 0%, rgba(219,235,238,0.958420868347339) 0%, rgba(165,244,73,0.8883928571428571) 100%);
 }
 .gal h1{
-  color:#E1D9D5;
-  text-shadow: 2px 4px 7px red;
-  font-family: 'Permanent Marker', cursive;
+  color:#2D7FCB;
+  text-shadow: 2px 4px 7px black;
+  font-family: 'sans serif', cursive;
+  font-weight: bold;
+}
+.hr1{
+  width: auto;
+}
+/*-----booking-------*/
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */progress,sub,sup{vertical-align:baseline}button,hr,input{overflow:visible}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+    font-family: "Cabin", sans-serif;
+    letter-spacing: 1px;
+    font-size:16px;
+
+}
+
+/* ---- BOOKING ---- */
+/* ---- Booking Form ---- */
+.bookingpage__body{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.bookingform__title {
+  text-align: center;
+}
+
+.bookingform__container {
+  margin: 0 auto;
+  width: 800px;
+}
+
+#bookingform {
+    margin: 50px 0;
+}
+
+.form__group {
+    display: block;
+    padding-top: 20px;
+}
+
+.form__option {
+height: 40px;
+    width: 270px;
+}
+
+.form__number {
+    width: auto;
+}
+
+.form__input {
+    width: 250px;
+}
+
+.form__input, .form__option, .form__number {
+    border-radius: 0;
+    border: 2px solid black;
+    margin: 10px 0;
+    padding: 10px 10px;
+}
+
+.form__input:focus {
+  border: 2px solid #4C586F;
+  outline: none;
+}
+
+
+
+.length__title, .passenger__title, .form__label, .adventure__title, .date__title, .pilot__title, .location__title, .time__title {
+  font-weight: 900;
+    float: left;
+    text-align: right;
+    margin: 10px 15px 10px 0;
+    width: 150px;
+    line-height: 43px;
+}
+
+
+
+.button__group {
+  margin: 0 auto;
+  width: 100px;
+}
+
+.hidden {
+  display: none;
+}
+
+.danger {
+  font-style: italic;
+  color: red;
+  font-size: 12px;
+  margin: -10px 0 10px 0;
+}
+/*-----feedback--------*/
+.feed{
+  padding-top: 50px;
+  padding-bottom: 60px;
+  padding-left: px;
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+* {
+	box-sizing: border-box;
+}
+
+.forma {
+	position: relative;
+
+	display: inline-block;
+	background: -webkit-repeating-linear-gradient(
+		-45deg,
+		#f18d7e,
+		#f18d7e 30px,
+		#ffffff 30px,
+		#ffffff 40px,
+		#96baeb 40px,
+		#96baeb 70px,
+		#ffffff 70px,
+		#ffffff 80px
+	);
+	background: -webkit-repeating-linear-gradient(
+		135deg,
+		#f18d7e,
+		#f18d7e 30px,
+		#ffffff 30px,
+		#ffffff 40px,
+		#96baeb 40px,
+		#96baeb 70px,
+		#ffffff 70px,
+		#ffffff 80px
+	);
+	background: repeating-linear-gradient(
+		-45deg,
+		#f18d7e,
+		#f18d7e 30px,
+		#ffffff 30px,
+		#ffffff 40px,
+		#96baeb 40px,
+		#96baeb 70px,
+		#ffffff 70px,
+		#ffffff 80px
+	);
+	border-radius: 4px;
+	padding: 7px;
+}
+.forma:before {
+  position: absolute;
+	background-color:#f8f8f8;
+  left: 120px;
+  bottom: 5px;
+  width: 100%;
+  height: 37%;
+  border-radius: 10% 0 0 0;
+}
+.forma-content {
+	width: 290px;
+	background-color: white;
+	padding: 20px;
+}
+
+.forma-content-title {
+	font-weight: 400;
+	text-align: center;
+	font-size: 24px;
+	letter-spacing: 1px;
+}
+.forma-content-description {
+	font-size: 14px;
+	margin: 15px 0;
+	text-align: justify;
+}
+
+.forma-content-item {
+	margin-bottom: 15px;
+}
+.forma-content-item:last-child{
+	margin: 0;
+}
+
+.forma-input,
+.forma-textarea {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #e1e1e1;
+	resize: none;
+	font-family: "Open Sans", sans-serif;
+	line-height: 1.4;
+	font-size: 14px;
+}
+.forma-textarea {
+	min-height: 80px;
+}
+.forma-button {
+	width: 100%;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	background: #4b89dc;
+	color: white;
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 400;
+	transition: 0.2s ease;
+	padding: 8px 25px 8px 25px;
+	cursor: pointer;
+}
+.forma-button:hover {
+	background-color: #6999da;
 }
