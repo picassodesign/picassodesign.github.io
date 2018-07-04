@@ -25,8 +25,7 @@ header{
   color: white;
 }
 .knowpara{
-  font-family: 'Eagle Lake', cursive;
-
+  font-family: 'ariel', cursive;
   font-size: 18px;
   margin-top: 35px;
   margin-left: 20px;
@@ -35,8 +34,10 @@ header{
   padding-bottom: 60px;
 }
 .knw{
-   background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+  background: rgb(142,139,189);
+  background: linear-gradient(90deg, rgba(142,139,189,1) 0%, rgba(255,65,232,1) 0%, rgba(94,71,212,1) 0%, rgba(45,37,37,0.9752275910364145) 0%, rgba(135,142,143,0.958420868347339) 0%, rgba(255,255,255,0.9136029411764706) 100%);
 }
+
 .works{
   margin-top: 70px;
 }
@@ -50,29 +51,11 @@ header{
 .hr1{
   width: auto;
 }
-footer{
-  background-color: black;
-  color:white;
-  height: 60px;
-}
-footer .social{
-  float: left;
-  padding-top: 20px;
-  padding-left: 10px;
-
-}
-footer .foot{
-  text-align: right;
-  margin-right: 30px;
-  padding-top: 20px;
-
-
-}
 .logoColoumn{
   color:lightgrey;
-  padding-top: 100px;
+  padding-top: 120px;
   padding-bottom: 70px;
-  background-color: #353B3C;
+  background: #404B56;
 }
 .logoColoumn h2{
   color:  orange;
@@ -184,7 +167,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
   padding-bottom: 50px;
   background: rgb(142,139,189);
   background: rgb(142,139,189);
-  background: linear-gradient(90deg, rgba(142,139,189,1) 0%, rgba(209,44,50,1) 0%, rgba(255,65,232,1) 0%, rgba(94,71,212,1) 0%, rgba(219,235,238,0.958420868347339) 0%, rgba(165,244,73,0.8883928571428571) 100%);
+  background: white;
 }
 .gal h1{
   color:#2D7FCB;
@@ -293,7 +276,8 @@ height: 40px;
   padding-top: 50px;
   padding-bottom: 60px;
   padding-left: px;
-  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  background: rgb(142,139,189);
+background: linear-gradient(90deg, rgba(142,139,189,1) 0%, rgba(94,71,212,1) 0%, rgba(45,37,37,0.9752275910364145) 0%, rgba(135,142,143,0.958420868347339) 0%, rgba(242,240,242,1) 0%, rgba(95,93,94,1) 71%, rgba(8,7,7,0.9136029411764706) 100%);
 }
 * {
 	box-sizing: border-box;
@@ -405,4 +389,15 @@ height: 40px;
 }
 .forma-button:hover {
 	background-color: #6999da;
+}
+/*---footer----*/
+footer{
+  min-height: 30px;
+  background-color: #404B56;
+  color: white;
+}
+footer .foot{
+  float: right;
+  padding-right: 20px;
+  padding-top: 7px;
 }
