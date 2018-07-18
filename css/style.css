@@ -1,34 +1,18 @@
 body{
   background-color: lightgrey;
 }
-@media only screen and (max-width:549px)
- {
-  header .cover-img{
-    height: 50vh;
-    width: 100%;
-    background:  linear-gradient(rgba(0, 0, 0, 0.6),rgba(0,0,0,0.6)), url("../media/showcase.jpg");
-    background-position: center;
-    backgrund-repeat: no-repeat;
-    background-size: 100% 100%;
-    position: relative;
-    background-attachment: fixed;
-  }
+header .cover-img{
 
+  height: 90vh;
+  background:  linear-gradient(rgba(0, 0, 0, 0.6),rgba(0,0,0,0.6)), url("../media/showcase.jpg");
+  background-position: center;
+  backgrund-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  position: relative;
 }
-@media only screen and (min-width:550px)
-{
+@media only screen and (max-width:549px){
   header .cover-img{
-    padding-top: 0;
-    height: 90vh;
-    width: 100%;
-    background:  linear-gradient(rgba(0, 0, 0, 0.6),rgba(0,0,0,0.6)), url("../media/showcase.jpg");
-    background-position: center;
-    backgrund-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    position: relative;
-  }
-  .navigation{
-    display: none;
+
   }
 }
