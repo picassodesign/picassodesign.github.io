@@ -57,7 +57,7 @@ body,html {
 }
 
 .bg {
-	background-image:url("486.jpg");
+	background-image:url("./media/486.jpg");
 	height:100%;
 	background-position:center;
 	background-repeat:no-repeat;
