@@ -1,0 +1,179 @@
+body,html {
+	height:100%;
+	margin:0;
+	color:white;
+}
+
+.navbar {
+	padding:25px 25px;
+	background-color:;
+}
+
+#mynav {
+	background-color:black;
+	border:none;
+	color:white;
+	opacity:0.5;
+}
+
+#mynav a {
+	color:white;
+	font-size:15px;
+	font-family:helvetica;
+	padding-left:20px;
+	margin-right:20px;
+	font-weight:bold;
+	opacity:1;
+}
+ 
+#mynav a:hover {
+	text-decoration:underline;
+}
+
+#active {
+	background-color:transparent;
+}
+
+#collapse {
+	border:none;
+	padding-bottom:;
+}
+
+#collapse a{
+	padding-left:70%;
+}
+
+.navbar-fixed-top.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+  color:red !important;
+  border-bottom:solid 1px lightgray !important;
+  opacity:1 !important;
+  
+}
+
+.scrolled a {
+	color:black !important;
+}
+
+.bg {
+	background-image:url("486.jpg");
+	height:100%;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	opacity:0.9;
+	width:100%;
+}
+
+.logo {
+	position:absolute;
+	top:50%;
+	left:10%;
+	transform: translate(-50%, -50%);
+	height:70px;
+	width:70px;
+	border-radius:;
+	opacity:1;
+}
+	
+#navbar.myicon {
+	top:20% !important;
+}
+
+
+.know {
+	text-align:center;
+	font-family:verdana;
+	font-size:35px;
+	color:violet;
+	font-weight:bold;
+}
+
+.knowpara {
+	text-align:center;
+	font-family:helvetica;
+	font-size:25px;
+	color:black;
+}
+
+* { box-sizing: border-box; }
+
+/* STRUCTURE */
+
+.wrapper {
+	padding: 5px;
+	max-width: auto;
+	width: 100%;
+	margin: 0px 0px;
+}
+
+.row {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 5px 0;
+}
+
+.column {
+	flex: 1;
+	text-align:center;
+	font-family:verdana;
+	font-size:18px;
+	padding:30px;
+	&:first-child { margin-left: 0; }
+	&:last-child { margin-right: 0; }
+	
+.column p {
+	color:#666666;
+}
+	
+	
+}
+
+#col1 { background-color:#f2f2f2;}
+#col2 { background-color:#e6e6e6; }
+#col3 { background-color:#d9d9d9; }
+
+
+@media screen and (max-width: 980px) {
+  .row .column {
+		margin-bottom: 5px;
+    flex-basis: 40%;
+		&:nth-last-child(2) {
+			margin-right: 0;
+		}
+		&:last-child {
+			flex-basis: 100%;
+			margin: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.row .column {
+		flex-basis: 100%;
+		margin: 0 0 5px 0;
+	}
+}
+
+#feedback {
+	background-color:lightgray;
+	width:100%;
+	margin:0px 0px;
+	padding-top:15px;
+	
+}
+
+footer {
+	background-color:#262626;
+	padding:15px 15px;
+}
+
+
+.foot {
+	text-align:center;
+	color:white;
+	font-size:14px;
+	font-family:helvetica;
+}
