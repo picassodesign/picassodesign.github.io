@@ -84,7 +84,7 @@ body,html {
 
 .know {
 	text-align:center;
-	font-family:sans-serif;
+	font-family: Lato;
 	font-size:35px;
 	color:#2952a3;
 	font-weight:bold;
@@ -92,14 +92,12 @@ body,html {
 
 .knowpara {
 	text-align:center;
-	font-family:sans-serif;
+	font-family:Lato;
 	font-size:25px;
 	color:black;
 }
 
 * { box-sizing: border-box; }
-
-/* STRUCTURE */
 
 .wrapper {
 	padding: 5px;
@@ -118,7 +116,7 @@ body,html {
 .column {
 	flex: 1;
 	text-align:center;
-	font-family:sans-serif;
+	font-family:Lato;
 	font-size:18px;
 	padding:32px;
 	&:first-child { margin-left: 0; }
