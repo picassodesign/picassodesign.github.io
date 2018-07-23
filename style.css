@@ -58,7 +58,7 @@ body,html {
 
 .bg {
 	background-image:url("./media/486.jpg");
-	height:auto;
+	height:100%;
 	background-position:center;
 	background-repeat:no-repeat;
 	background-size:cover;
