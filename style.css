@@ -38,11 +38,13 @@ body,html {
 
 #mynav {
 	
-	background-color:transparent;
+	background-color:black;
 	
 	border:none;
 	
 	color:white;
+	
+	opacity:0.5;
 	
 }
 
