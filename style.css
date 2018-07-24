@@ -3,7 +3,12 @@ body,html {
 	margin:0;
 	color:white;
 }
-
+.brand{
+	text-align: center;
+	padding-top: 20%;
+	font-weight: bold;
+	color:#C0CED9;
+}
 .navbar {
 	padding:25px 25px;
 	background-color:;
@@ -18,16 +23,17 @@ body,html {
 
 #mynav a {
 	color:white;
-	font-size:15px;
+	font-size:18px;
 	font-family:helvetica;
 	padding-left:20px;
 	margin-right:20px;
 	font-weight:bold;
 	opacity:1;
 }
- 
+
 #mynav a:hover {
 	text-decoration:underline;
+	color:red;
 }
 
 #active {
@@ -36,7 +42,6 @@ body,html {
 
 #collapse {
 	border:none;
-	padding-bottom:;
 }
 
 #collapse a{
@@ -49,7 +54,7 @@ body,html {
   color:red !important;
   border-bottom:solid 1px lightgray !important;
   opacity:1 !important;
-  
+
 }
 
 .scrolled a {
@@ -57,11 +62,12 @@ body,html {
 }
 
 .bg {
-	background-image:url("./media/486.jpg");
+	background-image:linear-gradient(rgba(0, 0, 0, 0.6),rgba(0,0,0,0.6)),url("./media/bg.jpg");
 	height:100%;
 	background-position:center;
 	background-repeat:no-repeat;
-	background-size:cover;
+	background-size:100% 100%;
+	background-attachment: fixed;
 	opacity:0.9;
 	width:100%;
 }
@@ -71,12 +77,10 @@ body,html {
 	top:50%;
 	left:10%;
 	transform: translate(-50%, -50%);
-	height:70px;
-	width:70px;
-	border-radius:;
-	opacity:1;
+	height:60px;
+	width:60px;
 }
-	
+
 #navbar.myicon {
 	top:20% !important;
 }
@@ -112,7 +116,6 @@ body,html {
 	justify-content: center;
 	margin: 5px 0;
 }
-
 .column {
 	flex: 1;
 	text-align:center;
@@ -121,17 +124,36 @@ body,html {
 	padding:32px;
 	&:first-child { margin-left: 0; }
 	&:last-child { margin-right: 0; }
-	
+
 .column p {
 	color:#666666;
 }
-	
-	
+
+
 }
 
 #col1 { background-color:#f2f2f2;}
 #col2 { background-color:#e6e6e6; }
 #col3 { background-color:#d9d9d9; }
+#feedback {
+	background-color: lightgrey;
+	width:100%;
+	margin:0px 0px;
+	padding-top:15px;
+}
+
+footer {
+	background-color:#262626;
+	padding:15px 15px;
+}
+
+
+.foot {
+	text-align:center;
+	color:white;
+	font-size:14px;
+	font-family:helvetica;
+}
 
 
 @media screen and (max-width: 980px) {
@@ -153,25 +175,7 @@ body,html {
 		flex-basis: 100%;
 		margin: 0 0 5px 0;
 	}
-}
-
-#feedback {
-	background-color:lightgray;
-	width:100%;
-	margin:0px 0px;
-	padding-top:15px;
-	
-}
-
-footer {
-	background-color:#262626;
-	padding:15px 15px;
-}
-
-
-.foot {
-	text-align:center;
-	color:white;
-	font-size:14px;
-	font-family:helvetica;
+	.brand{
+		padding-top: 20%;
+	}
 }
