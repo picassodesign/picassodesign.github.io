@@ -92,6 +92,8 @@ body,html {
   transition: background-color 200ms linear;
 
   border-bottom:solid 1px lightgray !important;
+  
+  opacity:1 !important;
 }
 
 .scrolled a {
