@@ -22,7 +22,7 @@ body,html {
 	
 	font-size:5vw;
 	
-	color:#6666ff;
+	color:#4d4dff;
 	
 	letter-spacing:2px;
 	
@@ -61,6 +61,8 @@ body,html {
 	padding-left:20px;
 	
 	margin-right:20px;
+	
+	opacity:1 !important;
 }
  
 #mynav a:hover {
@@ -130,7 +132,7 @@ body,html {
 	height:70px;
 	width:70px;
 	border-radius:20%;
-	opacity:1;
+	opacity:1 !important;
 }
 	
 #navbar.logo{
