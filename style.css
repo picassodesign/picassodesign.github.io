@@ -10,11 +10,11 @@ body,html {
 
 .brand {
 	
-	font-family:;
+	font-family:Londrina Solid, cursive;
 	
 	position:absolute;
 	
-	top:30%;
+	top:50%;
 	
 	left: 50%;
     
@@ -27,6 +27,8 @@ body,html {
 	letter-spacing:2px;
 	
 	word-spacing:2px;
+	
+	font-weight:bold;
 }
 
 .navbar {
