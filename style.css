@@ -40,14 +40,15 @@ body,html {
 
 #mynav {
 	
-	background-color:black;
+	background-color:transparent;
 	
 	border:none;
 	
 	color:white;
 	
-	opacity:0.5;
+	opacity:;
 	
+	border-bottom:solid 1px black;
 }
 
 #mynav a {
