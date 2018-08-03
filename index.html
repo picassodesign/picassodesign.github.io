@@ -25,16 +25,16 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 
 	<link href="https://fonts.googleapis.com/css?family=Lilly+Script+One" rel="stylesheet">
-	
+
 	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
-	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-	
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 
 
@@ -42,48 +42,36 @@
 <body id="home">
 
 
+<div class="toTop">
 
+
+</div>
 
 <div class="bg">
-
-	<h1 class="brand">Picasso Designs</h1>
-	
+  <div class="brand">
+    <span class="brand-1">PICASSO</span> <span class="brand-2">Designers</span>
+  </div>
+  <div class="tag">
+    WALL DESIGN | DOODLING | MURAL
+  </div>
 	<div class="navbar navbar-default navbar-fixed-top" id="mynav" role="navigation">
-    
 	<div class="container">
-
 	<div class="navbar-header">
-
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-
 		<span class="sr-only">Toggle navigation</span>
-
 		<span class="icon-bar"></span>
-
 		<span class="icon-bar"></span>
-
 		<span class="icon-bar"></span>
-
 		</button>
-
 		<a><img src="./media/logo.jpg" class="logo"></a>
-
         </div>
-
         <div class="collapse navbar-collapse" id="collapse">
-
 		<ul class="nav navbar-nav navbar-right">
-
 		<li id="active"><a href="#">Home</a></li>
-
 		<li><a href="#about">About</a></li>
-		
 		<li><a href="#gallery">Gallery</a></li>
-
 		<li><a href="#contact">Contact</a></li>
-
 		</ul>
-
         </div><!--/.nav-collapse -->
 
 		</div>
@@ -370,19 +358,12 @@
 
 
 <script>
-
 $(function () {
-
   $(document).scroll(function () {
-
   var $nav = $(".navbar-fixed-top");
-
   $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-
   });
-
   })
-
 </script>
 
 
