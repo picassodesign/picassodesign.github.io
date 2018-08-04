@@ -36,6 +36,17 @@ body,html {
 	letter-spacing:3px;
 	word-spacing:2px;
 }
+
+.button{
+	font-size: 25px;
+	position:absolute;
+	top:65%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.w3-button:hover{
+	background-color:blue;
+}
 .navbar {
 	padding:20px 20px;
 	background-color:;
@@ -152,7 +163,24 @@ body,html {
 
 * { box-sizing: border-box; }
 
+.logoColoumn {
+	background-color: 	 #262626;
 
+}
+
+.services {
+
+	text-align:center;
+
+	font-family: Lato;
+
+	font-size:35px;
+
+	color:#ffb366;
+
+	font-weight:bold;
+
+}
 
 .wrapper {
 
@@ -192,6 +220,9 @@ body,html {
 
 	padding:32px;
 
+	color:#f2f2f2;
+
+
 	&:first-child { margin-left: 0; }
 
 	&:last-child { margin-right: 0; }
@@ -212,11 +243,15 @@ body,html {
 
 
 
-#col1 { background-color:#f2f2f2;}
+#col1 { background-color:;
+	 border-right: solid 1px #ffb366;
+ }
 
-#col2 { background-color:#e6e6e6; }
+#col2 { background-color:;
+	border-right: solid 1px #ffb366;
+ }
 
-#col3 { background-color:#d9d9d9; }
+#col3 { background-color:; }
 
 #feedback {
 
@@ -367,7 +402,13 @@ footer {
 		letter-spacing:1px !important;
 		word-spacing:2px;
 	}
-
+	.button{
+		font-size: 15px !important;
+		position:absolute;
+		top:65% !important;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 	}
 
 }
